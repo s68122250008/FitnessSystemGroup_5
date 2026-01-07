@@ -60,5 +60,22 @@ public class Main {
 
         Equipment e2 = new Equipment("001", "dumbell");
         System.out.println(e2.getName());
+
+        // ! Gymstaff
+        Gymstaff staff1 = new Gymstaff("Somchai", "Trainer");
+        staff1.setStaffID("ST001");
+
+        Gymstaff staff2 = new Gymstaff("ST002", "Maree", "Manager");
+
+        System.out.println("Checking Status:");
+        System.out.println(staff1.checkWorkStatus());
+        System.out.println(staff2.checkWorkStatus());
+
+        System.out.println("Update: Maree goes on leave...");
+        staff2.setStatus("On Leave");
+        System.out.println(staff2.checkWorkStatus());
+
+        System.out.println("Current Total Staff: " + Gymstaff.staffCount);
+
     }
 }
